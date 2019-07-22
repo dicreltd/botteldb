@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>削除</h1>
+
+<p>削除しますか？</p>
+
+<p>{{ row['sid'] }}</p>
+<p>{{ row['sname'] }}</p>
+<p>{{ row['tanka'] }}</p>
+
+<form method="post" action="del">
+    <input type="hidden" name="sid" value="{{ row['sid'] }}">
+    <input type="submit" value="削除">
+</form>
+
+</body>
+</html>

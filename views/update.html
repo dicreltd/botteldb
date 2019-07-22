@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>変更</h1>
+
+
+<form method="post" action="update">
+
+<input type="hidden" name="sid" value="{{ row['sid'] }}"><br>
+商品名：<input type="text" name="sname" value="{{ row['sname'] }}"><br>
+単価：<input type="text" name="tanka" value="{{ row['tanka'] }}"><br>
+
+<input type="submit" value="変更">
+</form>
+
+</body>
+</html>

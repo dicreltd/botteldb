@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>{{shouhin['sname']}}</h1>
+
+<table>
+  <tr><th>商品ID</th><th>個数</th><th>日付</th></th>
+% for row in rows:
+   <tr>
+   <td>{{ row['sid'] }}</td>
+   <td>{{ row['kosu'] }}</td>
+   <td>{{ row['hi'] }}</td>
+   </tr>
+% end
+</table>
+
+<form  action="uriage" method="post">
+  個数：<input type="text" name="kosu">
+  <input type="hidden" name="sid" value="{{shouhin['sid']}}">
+  <input type="submit" value="追加">
+</form>
+
+<p>
+  <a href="hanbai">商品一覧へ</a>
+</p>
+</body>
+</html>

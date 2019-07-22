@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>商品</h1>
+
+<form method="post" action="shouhin">
+    商品：<input type="text" name="sname"><br>
+    単価：<input type="text" name="tanka"><br>
+    <input type="submit" value="追加">
+</form>
+
+<table>
+% for row in rows:
+   <tr>
+   <td>{{ row['sid'] }}</td>
+   <td>{{ row['sname'] }}</td>
+   <td>{{ row['tanka'] }}</td>
+   <td><a href="del?sid={{ row['sid'] }}">削除</a></td>
+   <td><a href="update?sid={{ row['sid'] }}">変更</a></td>
+   <td><a href="uriage?sid={{ row['sid'] }}">売上</a></td>
+   </tr>
+% end
+</table>
+</body>
+</html>
